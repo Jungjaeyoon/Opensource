@@ -67,7 +67,7 @@
 > bin/init
 ```
 
-![alt text](https://github.com/Jungjaeyoon/Opensource/blob/master/druid/druid.PNG "druid")
+![alt text](https://github.com/Jungjaeyoon/Opensource/druid.PNG "druid")
 
 
 ##### 이후 드루이드 폴더에 log 폴더 등 몇몇 폴더 생성 확인
@@ -116,5 +116,5 @@
 #### -> localhost:8090/colsole.html
 
 image 
-![alt text](https://github.com/Jungjaeyoon/Opensource/controlpanel.png  "druid")
+![alt text](https://github.com/Jungjaeyoon/Opensource/blob/master/druid/controlpanel.png  "druid")
 
