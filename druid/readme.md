@@ -87,3 +87,21 @@
 {"task":"index_hadoop_wikipedia_2013-10-09T21:30:32.802Z"}
 ```
 ### http://localhost:8090/console.html 에서 확인가능
+
+
+## 1.4 Install Tranquility
+```
+> curl -O http://static.druid.io/tranquility/releases/tranquility-distribution-0.8.0.tgz
+> tar -xzf tranquility-distribution-0.8.0.tgz
+> cd tranquility-distribution-0.8.0
+```
+### 실시간 데이터 스트리밍을 위한 서비스
+```
+> bin/tranquility server -configFile <path_to_druid_distro>/conf-quickstart/tranquility/server.json
+```
+
+## 2. 사용
+
+### 1.2 에서 실행한 Druid + 1.4으 Tranquility 를 실행
+### 작업을 json을 통해 진행
+### POST를 통해 데이터 입력 받음
