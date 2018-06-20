@@ -106,5 +106,5 @@
 ### 쿼리를 json을 통해 작성
 
 ### POST를 통해 데이터 입력
-![alt text](https://github.com/Jungjaeyoon/Opensource/edit/master/druid/druid.png "druid")
+![alt text](https://github.com/Jungjaeyoon/Opensource/blob/master/druid/druid.PNG "druid")
 
