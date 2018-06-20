@@ -177,3 +177,36 @@ image
 }
 ```
 
+## 보다 편한 사용을 위한 Pydruid
+#### https://github.com/druid-io/pydruid
+
+### Top N 쿼리 예시
+```
+top = query.topn(
+    datasource='twitterstream',
+    granularity='all',
+    intervals='2014-03-03/p1d',  # utc time of 2014 oscars
+    aggregations={'count': doublesum('count')},
+    dimension='user_mention_name',
+    filter=(Dimension('user_lang') == 'en') & (Dimension('first_hashtag') == 'oscars') &
+           (Dimension('user_time_zone') == 'Pacific Time (US & Canada)') &
+           ~(Dimension('user_mention_name') == 'No Mention'),
+    metric='count',
+    threshold=10
+)
+
+df = query.export_pandas()
+print df
+
+   count                 timestamp user_mention_name
+0   1303  2014-03-03T00:00:00.000Z      TheEllenShow
+1     44  2014-03-03T00:00:00.000Z        TheAcademy
+2     21  2014-03-03T00:00:00.000Z               MTV
+3     21  2014-03-03T00:00:00.000Z         peoplemag
+4     17  2014-03-03T00:00:00.000Z               THR
+5     16  2014-03-03T00:00:00.000Z      ItsQueenElsa
+6     16  2014-03-03T00:00:00.000Z           eonline
+7     15  2014-03-03T00:00:00.000Z       PerezHilton
+8     14  2014-03-03T00:00:00.000Z     realjohngreen
+9     12  2014-03-03T00:00:00.000Z       KevinSpacey
+```
