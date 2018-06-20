@@ -118,3 +118,62 @@
 image 
 ![alt text](https://github.com/Jungjaeyoon/Opensource/blob/master/druid/controlpanel.png  "druid")
 
+### 실제 수집을 위한 JSON 쿼리
+```
+{
+   "dataSources" : [
+      {
+         "spec" : {
+            "dataSchema" : {
+               "dataSource" : "bittrex3",
+               "metricsSpec" : [
+                  {
+                     "type" : "count",
+                     "name" : "count"
+                  },
+                  
+               ],
+               "granularitySpec" : {
+                  "segmentGranularity" : "hour",
+                  "queryGranularity" : "none",
+                  "type" : "uniform"
+               },
+               "parser" : {
+                  "type" : "string",
+                  "parseSpec" : {
+                     "format" : "json",
+                     "timestampSpec" : {
+                        "column" : "TimeStamp",
+                        "format" : "auto"
+                     },
+                     "dimensionsSpec" : {
+                        "dimensions" : [
+                           "MarketName"
+                        ]
+                     }
+                  }
+               }
+            },
+            "tuningConfig" : {
+               "type" : "realtime",
+               "windowPeriod" : "PT1M",
+               "intermediatePersistPeriod" : "PT1 M",
+               "maxRowsInMemory" : 75000
+            }
+         },
+         "properties" : {
+            "task.partitions" : "1",
+            "task.replicants" : "1"
+         }
+      }
+   ],
+   "properties" : {
+      "zookeeper.connect" : "localhost",
+     "druid.discovery.curator.path" : "/druid/discovery",
+    "druid.selectors.indexing.serviceName" : "druid/overlord", 
+      "http.port" : "8200",
+      "http.threads" : "40"
+   }
+}
+```
+
