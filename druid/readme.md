@@ -102,6 +102,9 @@
 
 ## 2. 사용
 
-### 1.2 에서 실행한 Druid + 1.4으 Tranquility 를 실행
-### 작업을 json을 통해 진행
-### POST를 통해 데이터 입력 받음
+### 1.2 에서 실행한 Druid + 1.4의 Tranquility 를 실행
+### 쿼리를 json을 통해 작성
+
+### POST를 통해 데이터 입력
+![alt text](https://github.com/Jungjaeyoon/Opensource/edit/master/druid/druid.png "druid")
+
