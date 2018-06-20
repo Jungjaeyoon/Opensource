@@ -66,6 +66,10 @@
 ```
 > bin/init
 ```
+
+![alt text](https://github.com/Jungjaeyoon/Opensource/blob/master/druid/controlpanel.PNG "druid")
+
+
 ##### 이후 드루이드 폴더에 log 폴더 등 몇몇 폴더 생성 확인
 #### 동일 위치(/druid-0.12.1)에서 다음 명령어 실행
 #### 각 명령어는 서로 다른 터미널에서 실행(프론트 실행)
@@ -104,7 +108,13 @@
 
 ### 1.2 에서 실행한 Druid + 1.4의 Tranquility 를 실행
 ### 쿼리를 json을 통해 작성
-
+---> 이 때 static(local file), streaming(using tranquility), hdfs 등 
 ### POST를 통해 데이터 입력
+### 모니터링(default address)
+#### -> localhost:8081
+### 콘솔
+#### -> localhost:8090/colsole.html
+
+image 
 ![alt text](https://github.com/Jungjaeyoon/Opensource/blob/master/druid/druid.PNG "druid")
 
