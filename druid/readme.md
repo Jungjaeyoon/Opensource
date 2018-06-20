@@ -116,5 +116,5 @@
 #### -> localhost:8090/colsole.html
 
 image 
-![alt text](https://github.com/Jungjaeyoon/Opensource/blob/master/druid/controlpanel.png  "druid")
+![alt text](https://github.com/Jungjaeyoon/Opensource/controlpanel.png  "druid")
 
